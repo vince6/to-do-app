@@ -5,7 +5,6 @@ function onReady() {
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
-    
 
     // get the text
     let title = newToDoText.value;
@@ -15,6 +14,7 @@ function onReady() {
 
     // create a new input
     let checkbox = document.createElement('input');
+
 
     // set the input's type to checkbox
     checkbox.type = "checkbox";
@@ -30,9 +30,20 @@ function onReady() {
 
     // empty the input
     newToDoText.value = '';
+
+    minusBtn.innerHTML = "Delete";
   });
 }
+
 
 window.onload = function() {
    onReady();
 };
+
+
+minusBtn.addEventListener('click', function() {
+      newLi.parentNode.removeChild(newLi);
+
+      // Remove Element
+      let minusBtn = document.createElement('button');
+    })

@@ -5,7 +5,6 @@ function onReady() {
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
-    
 
     // get the text
     let title = newToDoText.value;
@@ -28,8 +27,22 @@ function onReady() {
     // attach the li to the ul
     toDoList.appendChild(newLi);
 
+    //create delete button
+    let minusBtn = document.createElement('button');
+
+    //set the delete button
+    minusBtn.innerHTML = "Delete";
+
+    //attach delete button to li
+    newLi.appendChild(minusBtn);
+
+    minusBtn.addEventListener('click', function() {
+      newLi.parentNode.removeChild(newLi);
+})
+
     // empty the input
     newToDoText.value = '';
+
   });
 }
 

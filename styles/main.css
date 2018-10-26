@@ -1,0 +1,19 @@
+header {
+  background: url(../images/coffee2.jpg) center / cover;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+}
+ h1 {
+   color: white;
+ }
+label {
+  color: white;
+}
+ ul {
+   color: white;
+   list-style-type: none;
+   text-align: center;
+   margin-right: auto;
+ }
